@@ -25,7 +25,7 @@ class RegisterForm extends Component
 
     public function render()
     {
-        return view('livewire.registration-form');
+        return view('livewire.register-form');
     }
 
     public function submit()

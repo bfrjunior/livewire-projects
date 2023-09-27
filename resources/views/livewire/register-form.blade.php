@@ -1,4 +1,4 @@
-<form wire:submit.prevent="submit" class="w-[400px] mx-auto py-16">
+<form wire:submit.prevent="submit" class="flex flex-col w-[300px] mx-auto py-16">
 
     @if (session()->has('message'))
         <div class="bg-emerald-500 text-white py-3 px-4 mb-4">

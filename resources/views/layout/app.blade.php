@@ -383,6 +383,7 @@
         }
     </style>
 
+    <livewire:styles />
     <style>
         body {
 
@@ -393,7 +394,7 @@
 
 <body class="antialiased">
     {{ $slot }}
-
+    <livewire:scripts />
 </body>
 
 </html>

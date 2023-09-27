@@ -10,7 +10,7 @@ class Calculator extends Component
     public $number2 = 0;
     public string $action = '+';
     public float $result = 0;
-    public bool $disable = false;
+    public bool $disabled = false;
 
     public function render()
     {
@@ -37,9 +37,9 @@ class Calculator extends Component
     public function updated($property)
     {
         if ($this->number1 == '' || $this->number2 == '') {
-            $this->disable = true;
+            $this->disabled = true;
         } else {
-            $this->disable = false;
+            $this->disabled = false;
         }
     }
 }

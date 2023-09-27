@@ -1,4 +1,4 @@
-# 5 laravel Liveire Projects
+# 5 laravel Livewire Projects
 
 ## 🚀 Começando
 

@@ -1,66 +1,69 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 5 laravel Livewire Projects
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 🚀 Começando
 
-## About Laravel
+1.Clonar o projeto
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+2.Acesse o diretório raiz do projeto e execute composer install e npm install
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+3.Crie um arquivo .env e copie o conteúdo de .env.example
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+4.Execute php artisan key:generate --ansi no terminal
 
-## Learning Laravel
+5.Crie o arquivo de banco de dados database/database.sqlite
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+6.Execute as migrações com o comando php artisan migrate
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+7.Inicie o projeto executando php artisan serve
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+8.Inicie o servidor Vite (para servir arquivos CSS e JS) executando npm run dev
+##
+## Project #1 - Contador Simples
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Um único número de contador com botões + e - para aumentar ou diminuir o número. O exemplo mais simples de como você pode criar uma página dinâmica sem escrever JavaScript.
+![Alt text](storage/app/public/img-project/menos.PNG)
+![Alt text](storage/app/public/img-project/plus.PNG)
+## Project #2 - Calculadora
 
-### Premium Partners
+Uma calculadora muito simples com operações de +, -, *, /, %. Ela possui duas entradas e um menu suspenso para a operação, além do botão = para calcular o resultado.
+![Alt text](storage/app/public/img-project/mult.PNG)
+![Alt text](storage/app/public/img-project/menucal.PNG)
+## Project #3 - Simples ToDo List
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Aplicação feita milhões de vezes. Neste caso, ela foi feita com o Livewire e um modelo Eloquent. Os dados são salvos, atualizados e excluídos do banco de dados.
+![Alt text](storage/app/public/img-project/todo.PNG)
+## Project #4 - Cascading dropdown
+Dropdowns dependentes para continentes e países, você escolhe um continente e os países são filtrados com base nessa seleção. Um indicador de carregamento é exibido enquanto os países estão sendo carregados.
+![Alt text](storage/app/public/img-project/cas.PNG)
+![Alt text](storage/app/public/img-project/cdown.PNG)
+## Project #5 - Pesquisa de produtos e paginação
+Temos uma tabela de produtos com várias colunas, links de paginação e um campo de entrada para pesquisa. Os dados vêm do banco de dados e a palavra-chave de pesquisa é salva na URL. Portanto, quando você atualiza a página, o conteúdo é filtrado com base nessa palavra-chave.
+![Alt text](storage/app/public/img-project/product.PNG)
+![Alt text](storage/app/public/img-project/find.PNG)
+## Upload de Imagens
+Possibilidade de enviar várias imagens.
+Pré-visualização das imagens antes de enviar.
+As imagens são validadas ao enviar.
+As imagens são salvas no sistema de arquivos local.
+Todas as imagens enviadas são exibidas mesmo após a atualização da página.
+![Alt text](storage/app/public/img-project/img.PNG)
+## Validação de Formulário de Registro
+Formulário de registro muito simples com os seguintes campos:
 
-## Contributing
+Função do cliente (lista de rádio com duas opções: cliente, fornecedor),
+Primeiro nome
+Sobrenome
+E-mail
+Senha
+Nome da empresa
+Número de IVA
+Os campos "Nome da empresa" e "Número de IVA" só são exibidos e são obrigatórios se a função for "fornecedor". Quando você envia o formulário, mensagens de validação são exibidas. Assim que você digita nos campos, a validação em tempo real ocorre e as mensagens de erro são atualizadas ou ocultadas. Cada campo tem um atraso na validação para evitar o envio de muitas solicitações AJAX.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Quando a validação é bem-sucedida, uma mensagem de sessão é exibida.
+![Alt text](<storage/app/public/img-project/register error.PNG>)
+![Alt text](storage/app/public/img-project/success.PNG)
+## 🛠️ Construído com
+* Mysql
+* [Laravel](https://laravel.com/)
+* [PHP](https://www.php.net/)

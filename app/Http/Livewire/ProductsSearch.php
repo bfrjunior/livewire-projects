@@ -6,9 +6,13 @@ use App\Models\Product;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-class ProductSearch extends Component
+class ProductsSearch extends Component
 {
+    use WithPagination;
+
     public string $search = '';
+
+    protected $queryString = ['search'];
 
     public function render()
     {
@@ -18,7 +22,7 @@ class ProductSearch extends Component
                 ->orWhere('description', 'like', "%{$this->search}%");
         }
 
-        return view('livewire.product-search', [
+        return view('livewire.products-search', [
             'products' => $query->paginate(20)
         ]);
     }

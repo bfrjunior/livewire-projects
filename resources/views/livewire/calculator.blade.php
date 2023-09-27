@@ -5,7 +5,7 @@
             <select class="w-24" wire:model="action">
                 <option>+</option>
                 <option>-</option>
-                <option>*/</option>
+                <option>*</option>
                 <option>/</option>
                 <option>%</option>
             </select>

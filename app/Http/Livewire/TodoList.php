@@ -42,6 +42,16 @@ class TodoList extends Component
         $this->selectTodos();
     }
 
+    public function deleteTodo($id)
+    {
+        $todo = TodoItem::where('id', $id)->first();
+        if (!$todo) {
+            return;
+        }
+        $todo->delete();
+        $this->selectTodos();
+    }
+
     public function selectTodos()
     {
         $this->todos = TodoItem::orderBy('created_at', 'DESC')->get();
